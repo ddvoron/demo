@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public class RequestRegistry {
+public class RequestCommon {
 
     private int applicationId;
 
