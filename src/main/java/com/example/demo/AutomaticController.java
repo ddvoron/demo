@@ -19,6 +19,7 @@ public class AutomaticController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+
     @PostMapping("dbo")
     public ResponseEntity checkDbo(@RequestBody RequestCommon request) {
         //get dbo value from application

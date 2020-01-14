@@ -9,6 +9,7 @@ public class RequestCommon {
     }
 
     public void setApplicationId(int applicationId) {
+
         this.applicationId = applicationId;
     }
 }
