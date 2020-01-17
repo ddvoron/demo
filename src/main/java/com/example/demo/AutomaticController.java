@@ -41,4 +41,19 @@ public class AutomaticController {
         System.out.println("called client informing");
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PostMapping("generateSms")
+    public ResponseEntity generateSms(@RequestBody RequestCommon request) {
+        //send client sms with generated code
+        System.out.println("called client sms with code");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("compareCodes")
+    public ResponseEntity compareCodes(@RequestBody RequestCommon request) {
+        //get dbo value from application
+        boolean areCodesTheSame = false;
+        System.out.println("called comparing codes = " + areCodesTheSame);
+        return new ResponseEntity<>(areCodesTheSame,HttpStatus.OK);
+    }
 }
