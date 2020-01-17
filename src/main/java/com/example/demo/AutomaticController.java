@@ -25,7 +25,7 @@ public class AutomaticController {
         //get dbo value from application
         boolean dbo = true;
         System.out.println("called check for dbo = " + dbo);
-        return new ResponseEntity<>(dbo,HttpStatus.OK);
+        return new ResponseEntity<>(dbo, HttpStatus.OK);
     }
 
     @PostMapping("decline")
@@ -54,6 +54,46 @@ public class AutomaticController {
         //get dbo value from application
         boolean areCodesTheSame = false;
         System.out.println("called comparing codes = " + areCodesTheSame);
-        return new ResponseEntity<>(areCodesTheSame,HttpStatus.OK);
+        return new ResponseEntity<>(areCodesTheSame, HttpStatus.OK);
     }
+
+
+    @PostMapping("serviceAsanId")
+    public ResponseEntity callAsanServiceId(@RequestBody RequestCommon request) {
+        // send request to ESB for ASAN personal document info
+        System.out.println("called asan doc info");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("serviceAsanEmployment")
+    public ResponseEntity serviceAsanEmployment(@RequestBody RequestCommon request) {
+        // send request to ESB for ASAN person employment info
+        System.out.println("called asan employment info");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("serviceAcbCreditHistory")
+    public ResponseEntity serviceAcbCreditHistory(@RequestBody RequestCommon request) {
+        // send request to ESB for ACB person credit history info
+        System.out.println("called acb credit history info");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("brmsPrepareData")
+    public ResponseEntity brmsPrepareData(@RequestBody RequestCommon request) {
+        // send call prepare brms request
+        System.out.println("called prepare brms request");
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("brmsSaveDecision")
+    public ResponseEntity brmsSaveDecision(@RequestBody RequestCommon request) {
+        //get decision from application
+        boolean decline = true;
+        // send call save brms response
+        System.out.println("called save brms response");
+        return new ResponseEntity<>(decline, HttpStatus.OK);
+    }
+
+
 }
