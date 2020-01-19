@@ -8,9 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Random;
+import java.util.UUID;
+
 @RestController
-@RequestMapping("automatic")
-public class AutomaticController {
+@RequestMapping("jbpm")
+public class JbpmController {
 
     @PostMapping("reg")
     public ResponseEntity registry(@RequestBody RequestCommon request) {
@@ -94,6 +100,4 @@ public class AutomaticController {
         System.out.println("called save brms response");
         return new ResponseEntity<>(decline, HttpStatus.OK);
     }
-
-
 }
