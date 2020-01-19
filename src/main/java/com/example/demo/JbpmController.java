@@ -58,7 +58,7 @@ public class JbpmController {
     @PostMapping("compareCodes")
     public ResponseEntity compareCodes(@RequestBody RequestCommon request) {
         //get dbo value from application
-        boolean areCodesTheSame = false;
+        boolean areCodesTheSame = true;
         System.out.println("called comparing codes = " + areCodesTheSame);
         return new ResponseEntity<>(areCodesTheSame, HttpStatus.OK);
     }
@@ -95,7 +95,7 @@ public class JbpmController {
     @PostMapping("brmsSaveDecision")
     public ResponseEntity brmsSaveDecision(@RequestBody RequestCommon request) {
         //get decision from application
-        boolean decline = true;
+        boolean decline = false;
         // send call save brms response
         System.out.println("called save brms response");
         return new ResponseEntity<>(decline, HttpStatus.OK);
